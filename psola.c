@@ -26,6 +26,36 @@ int frame_size = 0;
 float bufferIn[];
 float bufferOut[];
 
+void quicksort(float * epochLocations ,int first,int last){
+    int pivot,j,temp,i;
+
+     if(first<last){
+         pivot=first;
+         i=first;
+         j=last;
+
+         while(i<j){
+             while(epochLocations[i]<=epochLocations[pivot]&&i<last)
+                 i++;
+             while(epochLocations[j]>epochLocations[pivot])
+                 j--;
+             if(i<j){
+                 temp=epochLocations[i];
+                  epochLocations[i]=epochLocations[j];
+                  epochLocations[j]=temp;
+             }
+         }
+
+         temp=epochLocations[pivot];
+         epochLocations[pivot]=epochLocations[j];
+         epochLocations[j]=temp;
+         quicksort(epochLocations,first,j-1);
+         quicksort(epochLocations,j+1,last);
+
+    }
+}
+
+
 int time2sample(int fs, int t){ //fs is sampling rate, time is time in ms
   return fs*t/1000;
 }
@@ -43,8 +73,8 @@ float getHanningCoef(int N, int idx) {
 
 int findMaxArrayIdx(float *array, int minIdx, int maxIdx) {
     int ret_idx = minIdx;
-
-    for (int i = minIdx; i < maxIdx; i++) {
+    int i;
+    for (i = minIdx; i < maxIdx; i = i+1) {
         if (array[i] > array[ret_idx]) {
             ret_idx = i;
         }
@@ -56,8 +86,8 @@ int findMaxArrayIdx(float *array, int minIdx, int maxIdx) {
 int findClosestIdxInArray(float *array, float value, int minIdx, int maxIdx) {
     int retIdx = minIdx;
     float bestResid = abs(array[retIdx] - value);
-
-    for (int i = minIdx; i < maxIdx; i++) {
+    int i;
+    for (i = minIdx; i < maxIdx; i = i+1) {
         if (abs(array[i] - value) < bestResid) {
             bestResid = abs(array[i] - value);
             retIdx = i;
@@ -67,7 +97,7 @@ int findClosestIdxInArray(float *array, float value, int minIdx, int maxIdx) {
     return retIdx;
 }
 
-void findEpochLocations(float *epochLocations, float *bufferIn, int periodLen, int frame_size) {
+void findEpochLocations(float *epochLocations, float *bufferIn, float *buffer, int periodLen, int frame_size) {
     // This algorithm requires that the epoch locations be pretty well marked
     int i = 0;
 
@@ -76,7 +106,7 @@ void findEpochLocations(float *epochLocations, float *bufferIn, int periodLen, i
 
     // First go right
     int epochCandidateIdx = epochLocations[0] + periodLen;
-    while (epochCandidateIdx < BUFFER_SIZE) {
+    while (epochCandidateIdx < frame_size) {
         i = i + 1;
         epochLocations[i] = epochCandidateIdx;
         epochCandidateIdx += periodLen;
@@ -85,24 +115,28 @@ void findEpochLocations(float *epochLocations, float *bufferIn, int periodLen, i
     // Then go left
     epochCandidateIdx = epochLocations[0] - periodLen;
     while (epochCandidateIdx > 0) {
-        epochLocations.push_back(epochCandidateIdx);
-        epochCandidateIdx -= periodLen;
+      i = i + 1;
+      epochLocations[i] = epochCandidateIdx;
+      epochCandidateIdx += periodLen;
     }
+    while (i < frame_size){
+      epochLocations[i] = frame_size + 5;
+    }
+
 
     // Sort in place so that we can more easily find the period,
     // where period = (epochLocations[t+1] + epochLocations[t-1]) / 2
-    std::sort(epochLocations.begin(), epochLocations.end());
+    quicksort( epochLocations ,0 ,frame_size);
 
-    // Finally, just to make sure we have our epochs in the right
-    // place, ensure that every epoch mark (sans first/last) sits on a peak
-    for (int i = 1; i < epochLocations.size() - 1; i++) {
-        int minIdx = epochLocations[i] - EPOCH_PEAK_REGION_WIGGLE;
-        int maxIdx = epochLocations[i] + EPOCH_PEAK_REGION_WIGGLE;
+}
 
-        int peakOffset = findMaxArrayIdx(bufferIn, minIdx, maxIdx) - minIdx;
-        peakOffset -= EPOCH_PEAK_REGION_WIGGLE;
-
-        epochLocations[i] += peakOffset;
+void newEpochLocations(float *newEpochs, int periodLen, int frame_size) {
+    // This algorithm requires that the epoch locations be pretty well marked
+    int p = 0;
+    int i = 0;
+    while (p < frame_size){
+      p = p + periodLen;
+      newEpochs[i] = p;
     }
 }
 
