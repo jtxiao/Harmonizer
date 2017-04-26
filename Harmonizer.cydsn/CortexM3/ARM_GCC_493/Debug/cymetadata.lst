@@ -1,0 +1,843 @@
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.align	2
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 328
+  27              	cy_meta_configecc:
+  28 0000 01       		.byte	1
+  29 0001 64       		.byte	100
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 01       		.byte	1
+  33 0005 05       		.byte	5
+  34 0006 01       		.byte	1
+  35 0007 40       		.byte	64
+  36 0008 32       		.byte	50
+  37 0009 0A       		.byte	10
+  38 000a 01       		.byte	1
+  39 000b 40       		.byte	64
+  40 000c 17       		.byte	23
+  41 000d 0B       		.byte	11
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 04       		.byte	4
+  45 0011 0E       		.byte	14
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 02       		.byte	2
+  49 0015 0F       		.byte	15
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 01       		.byte	1
+  53 0019 15       		.byte	21
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 01       		.byte	1
+  57 001d 1B       		.byte	27
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 02       		.byte	2
+  61 0021 40       		.byte	64
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 01       		.byte	1
+  65 0025 41       		.byte	65
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 03       		.byte	3
+  69 0029 42       		.byte	66
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 04       		.byte	4
+  73 002d 44       		.byte	68
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 02       		.byte	2
+  77 0031 46       		.byte	70
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 01       		.byte	1
+  81 0035 47       		.byte	71
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 02       		.byte	2
+  85 0039 48       		.byte	72
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 01       		.byte	1
+  89 003d 49       		.byte	73
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 01       		.byte	1
+  93 0041 4C       		.byte	76
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 02       		.byte	2
+  97 0045 4D       		.byte	77
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 02       		.byte	2
+ 101 0049 50       		.byte	80
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 01       		.byte	1
+ 105 004d 51       		.byte	81
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 8B       		.byte	-117
+ 109 0051 0D       		.byte	13
+ 110 0052 E6       		.byte	-26
+ 111 0053 08       		.byte	8
+ 112 0054 40       		.byte	64
+ 113 0055 54       		.byte	84
+ 114 0056 49       		.byte	73
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 3
+
+
+ 115 0057 FF       		.byte	-1
+ 116 0058 4A       		.byte	74
+ 117 0059 FF       		.byte	-1
+ 118 005a 4B       		.byte	75
+ 119 005b FF       		.byte	-1
+ 120 005c 4F       		.byte	79
+ 121 005d 01       		.byte	1
+ 122 005e 50       		.byte	80
+ 123 005f 18       		.byte	24
+ 124 0060 5A       		.byte	90
+ 125 0061 04       		.byte	4
+ 126 0062 5D       		.byte	93
+ 127 0063 09       		.byte	9
+ 128 0064 5F       		.byte	95
+ 129 0065 01       		.byte	1
+ 130 0066 60       		.byte	96
+ 131 0067 40       		.byte	64
+ 132 0068 62       		.byte	98
+ 133 0069 40       		.byte	64
+ 134 006a 64       		.byte	100
+ 135 006b 40       		.byte	64
+ 136 006c 65       		.byte	101
+ 137 006d 40       		.byte	64
+ 138 006e 66       		.byte	102
+ 139 006f 80       		.byte	-128
+ 140 0070 68       		.byte	104
+ 141 0071 80       		.byte	-128
+ 142 0072 6A       		.byte	106
+ 143 0073 80       		.byte	-128
+ 144 0074 6C       		.byte	108
+ 145 0075 80       		.byte	-128
+ 146 0076 6E       		.byte	110
+ 147 0077 80       		.byte	-128
+ 148 0078 92       		.byte	-110
+ 149 0079 01       		.byte	1
+ 150 007a AE       		.byte	-82
+ 151 007b 01       		.byte	1
+ 152 007c B0       		.byte	-80
+ 153 007d 01       		.byte	1
+ 154 007e BE       		.byte	-66
+ 155 007f 01       		.byte	1
+ 156 0080 C0       		.byte	-64
+ 157 0081 15       		.byte	21
+ 158 0082 C5       		.byte	-59
+ 159 0083 EC       		.byte	-20
+ 160 0084 C6       		.byte	-58
+ 161 0085 02       		.byte	2
+ 162 0086 C8       		.byte	-56
+ 163 0087 07       		.byte	7
+ 164 0088 C9       		.byte	-55
+ 165 0089 FF       		.byte	-1
+ 166 008a CA       		.byte	-54
+ 167 008b FF       		.byte	-1
+ 168 008c CB       		.byte	-53
+ 169 008d FF       		.byte	-1
+ 170 008e CD       		.byte	-51
+ 171 008f 83       		.byte	-125
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 4
+
+
+ 172 0090 CE       		.byte	-50
+ 173 0091 03       		.byte	3
+ 174 0092 CF       		.byte	-49
+ 175 0093 01       		.byte	1
+ 176 0094 D0       		.byte	-48
+ 177 0095 18       		.byte	24
+ 178 0096 D2       		.byte	-46
+ 179 0097 80       		.byte	-128
+ 180 0098 D4       		.byte	-44
+ 181 0099 01       		.byte	1
+ 182 009a D6       		.byte	-42
+ 183 009b 04       		.byte	4
+ 184 009c D8       		.byte	-40
+ 185 009d 04       		.byte	4
+ 186 009e DA       		.byte	-38
+ 187 009f 04       		.byte	4
+ 188 00a0 DB       		.byte	-37
+ 189 00a1 04       		.byte	4
+ 190 00a2 DD       		.byte	-35
+ 191 00a3 99       		.byte	-103
+ 192 00a4 DF       		.byte	-33
+ 193 00a5 01       		.byte	1
+ 194 00a6 E0       		.byte	-32
+ 195 00a7 40       		.byte	64
+ 196 00a8 E2       		.byte	-30
+ 197 00a9 40       		.byte	64
+ 198 00aa E4       		.byte	-28
+ 199 00ab 40       		.byte	64
+ 200 00ac E5       		.byte	-27
+ 201 00ad 40       		.byte	64
+ 202 00ae E6       		.byte	-26
+ 203 00af 80       		.byte	-128
+ 204 00b0 E8       		.byte	-24
+ 205 00b1 80       		.byte	-128
+ 206 00b2 EA       		.byte	-22
+ 207 00b3 80       		.byte	-128
+ 208 00b4 EC       		.byte	-20
+ 209 00b5 80       		.byte	-128
+ 210 00b6 EE       		.byte	-18
+ 211 00b7 80       		.byte	-128
+ 212 00b8 0F       		.byte	15
+ 213 00b9 80       		.byte	-128
+ 214 00ba 17       		.byte	23
+ 215 00bb 80       		.byte	-128
+ 216 00bc 1E       		.byte	30
+ 217 00bd 80       		.byte	-128
+ 218 00be 42       		.byte	66
+ 219 00bf 80       		.byte	-128
+ 220 00c0 47       		.byte	71
+ 221 00c1 80       		.byte	-128
+ 222 00c2 48       		.byte	72
+ 223 00c3 01       		.byte	1
+ 224 00c4 4D       		.byte	77
+ 225 00c5 04       		.byte	4
+ 226 00c6 4F       		.byte	79
+ 227 00c7 81       		.byte	-127
+ 228 00c8 56       		.byte	86
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 5
+
+
+ 229 00c9 80       		.byte	-128
+ 230 00ca 57       		.byte	87
+ 231 00cb 40       		.byte	64
+ 232 00cc 5D       		.byte	93
+ 233 00cd 04       		.byte	4
+ 234 00ce 5E       		.byte	94
+ 235 00cf 80       		.byte	-128
+ 236 00d0 5F       		.byte	95
+ 237 00d1 01       		.byte	1
+ 238 00d2 66       		.byte	102
+ 239 00d3 02       		.byte	2
+ 240 00d4 74       		.byte	116
+ 241 00d5 01       		.byte	1
+ 242 00d6 77       		.byte	119
+ 243 00d7 80       		.byte	-128
+ 244 00d8 86       		.byte	-122
+ 245 00d9 02       		.byte	2
+ 246 00da C2       		.byte	-62
+ 247 00db 10       		.byte	16
+ 248 00dc C4       		.byte	-60
+ 249 00dd 80       		.byte	-128
+ 250 00de D0       		.byte	-48
+ 251 00df 11       		.byte	17
+ 252 00e0 D2       		.byte	-46
+ 253 00e1 18       		.byte	24
+ 254 00e2 D6       		.byte	-42
+ 255 00e3 D0       		.byte	-48
+ 256 00e4 D8       		.byte	-40
+ 257 00e5 80       		.byte	-128
+ 258 00e6 B8       		.byte	-72
+ 259 00e7 20       		.byte	32
+ 260 00e8 BE       		.byte	-66
+ 261 00e9 10       		.byte	16
+ 262 00ea D8       		.byte	-40
+ 263 00eb 04       		.byte	4
+ 264 00ec DF       		.byte	-33
+ 265 00ed 01       		.byte	1
+ 266 00ee 1D       		.byte	29
+ 267 00ef 10       		.byte	16
+ 268 00f0 8D       		.byte	-115
+ 269 00f1 10       		.byte	16
+ 270 00f2 EC       		.byte	-20
+ 271 00f3 10       		.byte	16
+ 272 00f4 EC       		.byte	-20
+ 273 00f5 10       		.byte	16
+ 274 00f6 33       		.byte	51
+ 275 00f7 80       		.byte	-128
+ 276 00f8 CC       		.byte	-52
+ 277 00f9 10       		.byte	16
+ 278 00fa A7       		.byte	-89
+ 279 00fb 80       		.byte	-128
+ 280 00fc 87       		.byte	-121
+ 281 00fd 80       		.byte	-128
+ 282 00fe A7       		.byte	-89
+ 283 00ff 80       		.byte	-128
+ 284 0100 E6       		.byte	-26
+ 285 0101 10       		.byte	16
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 6
+
+
+ 286 0102 7C       		.byte	124
+ 287 0103 20       		.byte	32
+ 288 0104 8C       		.byte	-116
+ 289 0105 20       		.byte	32
+ 290 0106 DE       		.byte	-34
+ 291 0107 01       		.byte	1
+ 292 0108 E0       		.byte	-32
+ 293 0109 02       		.byte	2
+ 294 010a 45       		.byte	69
+ 295 010b 08       		.byte	8
+ 296 010c D0       		.byte	-48
+ 297 010d 01       		.byte	1
+ 298 010e A5       		.byte	-91
+ 299 010f 08       		.byte	8
+ 300 0110 25       		.byte	37
+ 301 0111 10       		.byte	16
+ 302 0112 C8       		.byte	-56
+ 303 0113 20       		.byte	32
+ 304 0114 B5       		.byte	-75
+ 305 0115 10       		.byte	16
+ 306 0116 A5       		.byte	-91
+ 307 0117 08       		.byte	8
+ 308 0118 B5       		.byte	-75
+ 309 0119 08       		.byte	8
+ 310 011a EC       		.byte	-20
+ 311 011b 08       		.byte	8
+ 312 011c 01       		.byte	1
+ 313 011d 01       		.byte	1
+ 314 011e 0D       		.byte	13
+ 315 011f 01       		.byte	1
+ 316 0120 00       		.byte	0
+ 317 0121 03       		.byte	3
+ 318 0122 00       		.byte	0
+ 319 0123 00       		.byte	0
+ 320 0124 00       		.byte	0
+ 321 0125 00       		.byte	0
+ 322 0126 00       		.byte	0
+ 323 0127 00       		.byte	0
+ 324 0128 00       		.byte	0
+ 325 0129 00       		.byte	0
+ 326 012a 02       		.byte	2
+ 327 012b 00       		.byte	0
+ 328 012c 00       		.byte	0
+ 329 012d 0B       		.byte	11
+ 330 012e 0B       		.byte	11
+ 331 012f 00       		.byte	0
+ 332 0130 00       		.byte	0
+ 333 0131 00       		.byte	0
+ 334 0132 00       		.byte	0
+ 335 0133 00       		.byte	0
+ 336 0134 00       		.byte	0
+ 337 0135 00       		.byte	0
+ 338 0136 00       		.byte	0
+ 339 0137 00       		.byte	0
+ 340 0138 00       		.byte	0
+ 341 0139 00       		.byte	0
+ 342 013a 02       		.byte	2
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 7
+
+
+ 343 013b 00       		.byte	0
+ 344 013c 00       		.byte	0
+ 345 013d 00       		.byte	0
+ 346 013e 00       		.byte	0
+ 347 013f 00       		.byte	0
+ 348 0140 00       		.byte	0
+ 349 0141 00       		.byte	0
+ 350 0142 20       		.byte	32
+ 351 0143 00       		.byte	0
+ 352 0144 10       		.byte	16
+ 353 0145 00       		.byte	0
+ 354 0146 18       		.byte	24
+ 355 0147 01       		.byte	1
+ 356              		.section	.cywolatch,"a",%progbits
+ 357              		.align	2
+ 358              		.type	cy_meta_wonvl, %object
+ 359              		.size	cy_meta_wonvl, 4
+ 360              	cy_meta_wonvl:
+ 361 0000 BC       		.byte	-68
+ 362 0001 90       		.byte	-112
+ 363 0002 AC       		.byte	-84
+ 364 0003 AF       		.byte	-81
+ 365              		.section	.cycustnvl,"a",%progbits
+ 366              		.align	2
+ 367              		.type	cy_meta_custnvl, %object
+ 368              		.size	cy_meta_custnvl, 4
+ 369              	cy_meta_custnvl:
+ 370 0000 00       		.byte	0
+ 371 0001 00       		.byte	0
+ 372 0002 40       		.byte	64
+ 373 0003 05       		.byte	5
+ 374              		.section	.cymeta,"a",%progbits
+ 375              		.align	2
+ 376              		.type	cy_metadata, %object
+ 377              		.size	cy_metadata, 12
+ 378              	cy_metadata:
+ 379 0000 00       		.byte	0
+ 380 0001 01       		.byte	1
+ 381 0002 2E       		.byte	46
+ 382 0003 12       		.byte	18
+ 383 0004 30       		.byte	48
+ 384 0005 69       		.byte	105
+ 385 0006 00       		.byte	0
+ 386 0007 01       		.byte	1
+ 387 0008 00       		.byte	0
+ 388 0009 00       		.byte	0
+ 389 000a 00       		.byte	0
+ 390 000b 00       		.byte	0
+ 391              		.section	.cyflashprotect,"a",%progbits
+ 392              		.align	2
+ 393              		.type	cy_meta_flashprotect, %object
+ 394              		.size	cy_meta_flashprotect, 256
+ 395              	cy_meta_flashprotect:
+ 396 0000 00000000 		.space	256
+ 396      00000000 
+ 396      00000000 
+ 396      00000000 
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 8
+
+
+ 396      00000000 
+ 397              		.text
+ 398              	.Letext0:
+ 399              		.file 1 "Generated_Source\\PSoC5\\cymetadata.c"
+ 400              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 401              		.section	.debug_info,"",%progbits
+ 402              	.Ldebug_info0:
+ 403 0000 37010000 		.4byte	0x137
+ 404 0004 0400     		.2byte	0x4
+ 405 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 406 000a 04       		.byte	0x4
+ 407 000b 01       		.uleb128 0x1
+ 408 000c 24010000 		.4byte	.LASF18
+ 409 0010 01       		.byte	0x1
+ 410 0011 D2010000 		.4byte	.LASF19
+ 411 0015 12000000 		.4byte	.LASF20
+ 412 0019 00000000 		.4byte	.Ldebug_line0
+ 413 001d 02       		.uleb128 0x2
+ 414 001e 01       		.byte	0x1
+ 415 001f 06       		.byte	0x6
+ 416 0020 C6010000 		.4byte	.LASF0
+ 417 0024 02       		.uleb128 0x2
+ 418 0025 01       		.byte	0x1
+ 419 0026 08       		.byte	0x8
+ 420 0027 55000000 		.4byte	.LASF1
+ 421 002b 02       		.uleb128 0x2
+ 422 002c 02       		.byte	0x2
+ 423 002d 05       		.byte	0x5
+ 424 002e 14010000 		.4byte	.LASF2
+ 425 0032 02       		.uleb128 0x2
+ 426 0033 02       		.byte	0x2
+ 427 0034 07       		.byte	0x7
+ 428 0035 75000000 		.4byte	.LASF3
+ 429 0039 02       		.uleb128 0x2
+ 430 003a 04       		.byte	0x4
+ 431 003b 05       		.byte	0x5
+ 432 003c BD010000 		.4byte	.LASF4
+ 433 0040 02       		.uleb128 0x2
+ 434 0041 04       		.byte	0x4
+ 435 0042 07       		.byte	0x7
+ 436 0043 63000000 		.4byte	.LASF5
+ 437 0047 02       		.uleb128 0x2
+ 438 0048 08       		.byte	0x8
+ 439 0049 05       		.byte	0x5
+ 440 004a 01010000 		.4byte	.LASF6
+ 441 004e 02       		.uleb128 0x2
+ 442 004f 08       		.byte	0x8
+ 443 0050 07       		.byte	0x7
+ 444 0051 BE000000 		.4byte	.LASF7
+ 445 0055 03       		.uleb128 0x3
+ 446 0056 04       		.byte	0x4
+ 447 0057 05       		.byte	0x5
+ 448 0058 696E7400 		.ascii	"int\000"
+ 449 005c 02       		.uleb128 0x2
+ 450 005d 04       		.byte	0x4
+ 451 005e 07       		.byte	0x7
+ 452 005f B1000000 		.4byte	.LASF8
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 9
+
+
+ 453 0063 04       		.uleb128 0x4
+ 454 0064 1E010000 		.4byte	.LASF21
+ 455 0068 02       		.byte	0x2
+ 456 0069 9201     		.2byte	0x192
+ 457 006b 24000000 		.4byte	0x24
+ 458 006f 02       		.uleb128 0x2
+ 459 0070 04       		.byte	0x4
+ 460 0071 04       		.byte	0x4
+ 461 0072 0C000000 		.4byte	.LASF9
+ 462 0076 02       		.uleb128 0x2
+ 463 0077 08       		.byte	0x8
+ 464 0078 04       		.byte	0x4
+ 465 0079 88000000 		.4byte	.LASF10
+ 466 007d 02       		.uleb128 0x2
+ 467 007e 01       		.byte	0x1
+ 468 007f 08       		.byte	0x8
+ 469 0080 0F010000 		.4byte	.LASF11
+ 470 0084 05       		.uleb128 0x5
+ 471 0085 63000000 		.4byte	0x63
+ 472 0089 95000000 		.4byte	0x95
+ 473 008d 06       		.uleb128 0x6
+ 474 008e 95000000 		.4byte	0x95
+ 475 0092 4701     		.2byte	0x147
+ 476 0094 00       		.byte	0
+ 477 0095 02       		.uleb128 0x2
+ 478 0096 04       		.byte	0x4
+ 479 0097 07       		.byte	0x7
+ 480 0098 F8000000 		.4byte	.LASF12
+ 481 009c 07       		.uleb128 0x7
+ 482 009d 9F000000 		.4byte	.LASF13
+ 483 00a1 01       		.byte	0x1
+ 484 00a2 1F       		.byte	0x1f
+ 485 00a3 AD000000 		.4byte	0xad
+ 486 00a7 05       		.uleb128 0x5
+ 487 00a8 03       		.byte	0x3
+ 488 00a9 00000000 		.4byte	cy_meta_configecc
+ 489 00ad 08       		.uleb128 0x8
+ 490 00ae 84000000 		.4byte	0x84
+ 491 00b2 05       		.uleb128 0x5
+ 492 00b3 63000000 		.4byte	0x63
+ 493 00b7 C2000000 		.4byte	0xc2
+ 494 00bb 09       		.uleb128 0x9
+ 495 00bc 95000000 		.4byte	0x95
+ 496 00c0 03       		.byte	0x3
+ 497 00c1 00       		.byte	0
+ 498 00c2 07       		.uleb128 0x7
+ 499 00c3 8F000000 		.4byte	.LASF14
+ 500 00c7 01       		.byte	0x1
+ 501 00c8 55       		.byte	0x55
+ 502 00c9 D3000000 		.4byte	0xd3
+ 503 00cd 05       		.uleb128 0x5
+ 504 00ce 03       		.byte	0x3
+ 505 00cf 00000000 		.4byte	cy_meta_custnvl
+ 506 00d3 08       		.uleb128 0x8
+ 507 00d4 B2000000 		.4byte	0xb2
+ 508 00d8 07       		.uleb128 0x7
+ 509 00d9 EA000000 		.4byte	.LASF15
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 10
+
+
+ 510 00dd 01       		.byte	0x1
+ 511 00de 63       		.byte	0x63
+ 512 00df E9000000 		.4byte	0xe9
+ 513 00e3 05       		.uleb128 0x5
+ 514 00e4 03       		.byte	0x3
+ 515 00e5 00000000 		.4byte	cy_meta_wonvl
+ 516 00e9 08       		.uleb128 0x8
+ 517 00ea B2000000 		.4byte	0xb2
+ 518 00ee 05       		.uleb128 0x5
+ 519 00ef 63000000 		.4byte	0x63
+ 520 00f3 FE000000 		.4byte	0xfe
+ 521 00f7 09       		.uleb128 0x9
+ 522 00f8 95000000 		.4byte	0x95
+ 523 00fc FF       		.byte	0xff
+ 524 00fd 00       		.byte	0
+ 525 00fe 07       		.uleb128 0x7
+ 526 00ff D5000000 		.4byte	.LASF16
+ 527 0103 01       		.byte	0x1
+ 528 0104 71       		.byte	0x71
+ 529 0105 0F010000 		.4byte	0x10f
+ 530 0109 05       		.uleb128 0x5
+ 531 010a 03       		.byte	0x3
+ 532 010b 00000000 		.4byte	cy_meta_flashprotect
+ 533 010f 08       		.uleb128 0x8
+ 534 0110 EE000000 		.4byte	0xee
+ 535 0114 05       		.uleb128 0x5
+ 536 0115 63000000 		.4byte	0x63
+ 537 0119 24010000 		.4byte	0x124
+ 538 011d 09       		.uleb128 0x9
+ 539 011e 95000000 		.4byte	0x95
+ 540 0122 0B       		.byte	0xb
+ 541 0123 00       		.byte	0
+ 542 0124 07       		.uleb128 0x7
+ 543 0125 00000000 		.4byte	.LASF17
+ 544 0129 01       		.byte	0x1
+ 545 012a 9E       		.byte	0x9e
+ 546 012b 35010000 		.4byte	0x135
+ 547 012f 05       		.uleb128 0x5
+ 548 0130 03       		.byte	0x3
+ 549 0131 00000000 		.4byte	cy_metadata
+ 550 0135 08       		.uleb128 0x8
+ 551 0136 14010000 		.4byte	0x114
+ 552 013a 00       		.byte	0
+ 553              		.section	.debug_abbrev,"",%progbits
+ 554              	.Ldebug_abbrev0:
+ 555 0000 01       		.uleb128 0x1
+ 556 0001 11       		.uleb128 0x11
+ 557 0002 01       		.byte	0x1
+ 558 0003 25       		.uleb128 0x25
+ 559 0004 0E       		.uleb128 0xe
+ 560 0005 13       		.uleb128 0x13
+ 561 0006 0B       		.uleb128 0xb
+ 562 0007 03       		.uleb128 0x3
+ 563 0008 0E       		.uleb128 0xe
+ 564 0009 1B       		.uleb128 0x1b
+ 565 000a 0E       		.uleb128 0xe
+ 566 000b 10       		.uleb128 0x10
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 11
+
+
+ 567 000c 17       		.uleb128 0x17
+ 568 000d 00       		.byte	0
+ 569 000e 00       		.byte	0
+ 570 000f 02       		.uleb128 0x2
+ 571 0010 24       		.uleb128 0x24
+ 572 0011 00       		.byte	0
+ 573 0012 0B       		.uleb128 0xb
+ 574 0013 0B       		.uleb128 0xb
+ 575 0014 3E       		.uleb128 0x3e
+ 576 0015 0B       		.uleb128 0xb
+ 577 0016 03       		.uleb128 0x3
+ 578 0017 0E       		.uleb128 0xe
+ 579 0018 00       		.byte	0
+ 580 0019 00       		.byte	0
+ 581 001a 03       		.uleb128 0x3
+ 582 001b 24       		.uleb128 0x24
+ 583 001c 00       		.byte	0
+ 584 001d 0B       		.uleb128 0xb
+ 585 001e 0B       		.uleb128 0xb
+ 586 001f 3E       		.uleb128 0x3e
+ 587 0020 0B       		.uleb128 0xb
+ 588 0021 03       		.uleb128 0x3
+ 589 0022 08       		.uleb128 0x8
+ 590 0023 00       		.byte	0
+ 591 0024 00       		.byte	0
+ 592 0025 04       		.uleb128 0x4
+ 593 0026 16       		.uleb128 0x16
+ 594 0027 00       		.byte	0
+ 595 0028 03       		.uleb128 0x3
+ 596 0029 0E       		.uleb128 0xe
+ 597 002a 3A       		.uleb128 0x3a
+ 598 002b 0B       		.uleb128 0xb
+ 599 002c 3B       		.uleb128 0x3b
+ 600 002d 05       		.uleb128 0x5
+ 601 002e 49       		.uleb128 0x49
+ 602 002f 13       		.uleb128 0x13
+ 603 0030 00       		.byte	0
+ 604 0031 00       		.byte	0
+ 605 0032 05       		.uleb128 0x5
+ 606 0033 01       		.uleb128 0x1
+ 607 0034 01       		.byte	0x1
+ 608 0035 49       		.uleb128 0x49
+ 609 0036 13       		.uleb128 0x13
+ 610 0037 01       		.uleb128 0x1
+ 611 0038 13       		.uleb128 0x13
+ 612 0039 00       		.byte	0
+ 613 003a 00       		.byte	0
+ 614 003b 06       		.uleb128 0x6
+ 615 003c 21       		.uleb128 0x21
+ 616 003d 00       		.byte	0
+ 617 003e 49       		.uleb128 0x49
+ 618 003f 13       		.uleb128 0x13
+ 619 0040 2F       		.uleb128 0x2f
+ 620 0041 05       		.uleb128 0x5
+ 621 0042 00       		.byte	0
+ 622 0043 00       		.byte	0
+ 623 0044 07       		.uleb128 0x7
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 12
+
+
+ 624 0045 34       		.uleb128 0x34
+ 625 0046 00       		.byte	0
+ 626 0047 03       		.uleb128 0x3
+ 627 0048 0E       		.uleb128 0xe
+ 628 0049 3A       		.uleb128 0x3a
+ 629 004a 0B       		.uleb128 0xb
+ 630 004b 3B       		.uleb128 0x3b
+ 631 004c 0B       		.uleb128 0xb
+ 632 004d 49       		.uleb128 0x49
+ 633 004e 13       		.uleb128 0x13
+ 634 004f 3F       		.uleb128 0x3f
+ 635 0050 19       		.uleb128 0x19
+ 636 0051 02       		.uleb128 0x2
+ 637 0052 18       		.uleb128 0x18
+ 638 0053 00       		.byte	0
+ 639 0054 00       		.byte	0
+ 640 0055 08       		.uleb128 0x8
+ 641 0056 26       		.uleb128 0x26
+ 642 0057 00       		.byte	0
+ 643 0058 49       		.uleb128 0x49
+ 644 0059 13       		.uleb128 0x13
+ 645 005a 00       		.byte	0
+ 646 005b 00       		.byte	0
+ 647 005c 09       		.uleb128 0x9
+ 648 005d 21       		.uleb128 0x21
+ 649 005e 00       		.byte	0
+ 650 005f 49       		.uleb128 0x49
+ 651 0060 13       		.uleb128 0x13
+ 652 0061 2F       		.uleb128 0x2f
+ 653 0062 0B       		.uleb128 0xb
+ 654 0063 00       		.byte	0
+ 655 0064 00       		.byte	0
+ 656 0065 00       		.byte	0
+ 657              		.section	.debug_aranges,"",%progbits
+ 658 0000 14000000 		.4byte	0x14
+ 659 0004 0200     		.2byte	0x2
+ 660 0006 00000000 		.4byte	.Ldebug_info0
+ 661 000a 04       		.byte	0x4
+ 662 000b 00       		.byte	0
+ 663 000c 0000     		.2byte	0
+ 664 000e 0000     		.2byte	0
+ 665 0010 00000000 		.4byte	0
+ 666 0014 00000000 		.4byte	0
+ 667              		.section	.debug_line,"",%progbits
+ 668              	.Ldebug_line0:
+ 669 0000 4D000000 		.section	.debug_str,"MS",%progbits,1
+ 669      02004700 
+ 669      00000201 
+ 669      FB0E0D00 
+ 669      01010101 
+ 670              	.LASF17:
+ 671 0000 63795F6D 		.ascii	"cy_metadata\000"
+ 671      65746164 
+ 671      61746100 
+ 672              	.LASF9:
+ 673 000c 666C6F61 		.ascii	"float\000"
+ 673      7400
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 13
+
+
+ 674              	.LASF20:
+ 675 0012 433A5C55 		.ascii	"C:\\Users\\Justin\\Documents\\MIT\\6.115\\FINAL PRO"
+ 675      73657273 
+ 675      5C4A7573 
+ 675      74696E5C 
+ 675      446F6375 
+ 676 003f 4A454354 		.ascii	"JECT\\Harmonizer.cydsn\000"
+ 676      5C486172 
+ 676      6D6F6E69 
+ 676      7A65722E 
+ 676      63796473 
+ 677              	.LASF1:
+ 678 0055 756E7369 		.ascii	"unsigned char\000"
+ 678      676E6564 
+ 678      20636861 
+ 678      7200
+ 679              	.LASF5:
+ 680 0063 6C6F6E67 		.ascii	"long unsigned int\000"
+ 680      20756E73 
+ 680      69676E65 
+ 680      6420696E 
+ 680      7400
+ 681              	.LASF3:
+ 682 0075 73686F72 		.ascii	"short unsigned int\000"
+ 682      7420756E 
+ 682      7369676E 
+ 682      65642069 
+ 682      6E7400
+ 683              	.LASF10:
+ 684 0088 646F7562 		.ascii	"double\000"
+ 684      6C6500
+ 685              	.LASF14:
+ 686 008f 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 686      6574615F 
+ 686      63757374 
+ 686      6E766C00 
+ 687              	.LASF13:
+ 688 009f 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 688      6574615F 
+ 688      636F6E66 
+ 688      69676563 
+ 688      6300
+ 689              	.LASF8:
+ 690 00b1 756E7369 		.ascii	"unsigned int\000"
+ 690      676E6564 
+ 690      20696E74 
+ 690      00
+ 691              	.LASF7:
+ 692 00be 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 692      206C6F6E 
+ 692      6720756E 
+ 692      7369676E 
+ 692      65642069 
+ 693              	.LASF16:
+ 694 00d5 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 694      6574615F 
+ 694      666C6173 
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 14
+
+
+ 694      6870726F 
+ 694      74656374 
+ 695              	.LASF15:
+ 696 00ea 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 696      6574615F 
+ 696      776F6E76 
+ 696      6C00
+ 697              	.LASF12:
+ 698 00f8 73697A65 		.ascii	"sizetype\000"
+ 698      74797065 
+ 698      00
+ 699              	.LASF6:
+ 700 0101 6C6F6E67 		.ascii	"long long int\000"
+ 700      206C6F6E 
+ 700      6720696E 
+ 700      7400
+ 701              	.LASF11:
+ 702 010f 63686172 		.ascii	"char\000"
+ 702      00
+ 703              	.LASF2:
+ 704 0114 73686F72 		.ascii	"short int\000"
+ 704      7420696E 
+ 704      7400
+ 705              	.LASF21:
+ 706 011e 75696E74 		.ascii	"uint8\000"
+ 706      3800
+ 707              	.LASF18:
+ 708 0124 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 708      4320342E 
+ 708      392E3320 
+ 708      32303135 
+ 708      30333033 
+ 709 0157 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 709      20726576 
+ 709      6973696F 
+ 709      6E203232 
+ 709      31323230 
+ 710 018a 67202D73 		.ascii	"g -std=gnu99 -ffunction-sections -ffat-lto-objects\000"
+ 710      74643D67 
+ 710      6E753939 
+ 710      202D6666 
+ 710      756E6374 
+ 711              	.LASF4:
+ 712 01bd 6C6F6E67 		.ascii	"long int\000"
+ 712      20696E74 
+ 712      00
+ 713              	.LASF0:
+ 714 01c6 7369676E 		.ascii	"signed char\000"
+ 714      65642063 
+ 714      68617200 
+ 715              	.LASF19:
+ 716 01d2 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 716      72617465 
+ 716      645F536F 
+ 716      75726365 
+ 716      5C50536F 
+ 717              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ARM GAS  C:\Users\Justin\AppData\Local\Temp\ccEuMMHc.s 			page 15
+
+

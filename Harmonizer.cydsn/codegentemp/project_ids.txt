@@ -1,0 +1,7 @@
+C:\Users\Justin\Downloads\exercise_2_zipc3\lab2\LAB2.cydsn\LAB2.cyprj|d50f70d0-b493-40cd-97ed-e4eda64c141a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f7afd3d5-40fc-43a0-bd74-a0cb3b500a53
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|9c145d13-7233-4470-8d8a-0b33d59419ca
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ee13b29b-1dc2-429e-b1fd-f0d4680b72a7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|76cec02d-259b-4e6f-9bdf-89a5ba2c245a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|95dac06a-19c7-4656-8d47-144b8c01032c
+C:\Users\Justin\Documents\MIT\6.115\FINAL PROJECT\Harmonizer.cydsn\Harmonizer.cyprj|219076da-a960-43cf-b39e-f185d1fa745e
