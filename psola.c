@@ -97,16 +97,30 @@ int findClosestIdxInArray(float *array, float value, int minIdx, int maxIdx) {
     return retIdx;
 }
 
-void findEpochLocations(float *epochLocations, float *bufferIn, float *buffer, int periodLen, int frame_size) {
+int findClosestEpoch(int *array, int value, int minIdx, int maxIdx) {
+    int retIdx = minIdx;
+    float bestResid = abs(array[retIdx] - value);
+    int i;
+    for (i = minIdx; i < maxIdx; i = i+1) {
+        if (abs(array[i] - value) < bestResid) {
+            bestResid = abs(array[i] - value);
+            retIdx = i;
+        }
+    }
+
+    return array[retIdx];
+}
+
+void findEpochLocations(float *epochLocations, float *bufferIn, float *buffer, int periodLen, int buffer_size) {
     // This algorithm requires that the epoch locations be pretty well marked
     int i = 0;
 
-    int largestPeak = findMaxArrayIdx(bufferIn, frame_size/4, frame_size*3/4);
+    int largestPeak = findMaxArrayIdx(bufferIn, buffer_size/4, buffer_size*3/4);
     epochLocations[i] = largestPeak;
 
     // First go right
     int epochCandidateIdx = epochLocations[0] + periodLen;
-    while (epochCandidateIdx < frame_size) {
+    while (epochCandidateIdx < buffer_size) {
         i = i + 1;
         epochLocations[i] = epochCandidateIdx;
         epochCandidateIdx += periodLen;
@@ -119,27 +133,73 @@ void findEpochLocations(float *epochLocations, float *bufferIn, float *buffer, i
       epochLocations[i] = epochCandidateIdx;
       epochCandidateIdx += periodLen;
     }
-    while (i < frame_size){
-      epochLocations[i] = frame_size + 5;
+    while (i < buffer_size){
+      epochLocations[i] = buffer_size + 5;
     }
 
 
     // Sort in place so that we can more easily find the period,
     // where period = (epochLocations[t+1] + epochLocations[t-1]) / 2
-    quicksort( epochLocations ,0 ,frame_size);
+    quicksort( epochLocations ,0 ,buffer_size);
 
 }
 
-void newEpochLocations(float *newEpochs, int periodLen, int frame_size) {
+void newEpochLocations(int *newEpochs, int periodLen, int buffer_size) {
     // This algorithm requires that the epoch locations be pretty well marked
     int p = 0;
     int i = 0;
-    while (p < frame_size){
+    while (p < buffer_size){
       p = p + periodLen;
       newEpochs[i] = p;
     }
 }
+void overlapAddArray(float *dest, float *src, int startIdx, int len) {
+    int idxLow = startIdx;
+    int idxHigh = startIdx + len;
 
+    int padLow = 0;
+    int padHigh = 0;
+    if (idxLow < 0) {
+        padLow = -idxLow;
+    }
+    if (idxHigh > BUFFER_SIZE) {
+        padHigh = BUFFER_SIZE - idxHigh;
+    }
+
+    // Finally, reconstruct the buffer
+    for (int i = padLow; i < len + padHigh; i++) {
+        dest[startIdx + i] += src[i];
+    }
+}
+
+void window(int *epochLocations, float * newEpochs, float * bufferIn, float * bufferOut, float * windowBuffer, int periodLen, int newPeriod, int buffer_size, int frame_size, int epochLen){
+  int firstEpoch;
+  int i = 0;
+  for ( i = 0; i <epochLen; i = i + 1){
+    if(newEpochs[i] > frame_size){
+      firstEpoch = newEpochs[i];
+      break;
+    }
+  }
+  int ep = firstEpoch; //first epoch to consider in the new epochs
+  int closest = findClosestEpoch(epochLocations, ep, frame_size, 2*frame_size) ; // closest original epoch
+  int winLen = 2 * periodLen + 1; //length of each window
+  float window[winLen]; //buffer to store window
+  int j;
+  for (j = 0; j < winLen; j = j + 1){
+    window[j] = getHanningCoef(winLen, j) * bufferIn[closest - periodLen + j]; // window the array
+  }
+  overlapAddArray(bufferOut, window, ep, winLen); //overlap/add first window into bufferOut
+  while(ep < 2 * frame_size){
+    i = i+1; //find next epoch
+    ep = newEpochs[i];
+    closest = findClosestEpoch(epochLocations, ep, frame_size, 2*frame_size) ; // closest original epoch
+    for (j = 0; j < winLen; j = j + 1){
+      window[j] = getHanningCoef(winLen, j) * bufferIn[closest - periodLen + j]; // window the array
+    }
+    overlapAddArray(bufferOut, window, ep, winLen); //overlap/add
+  }
+}
 
 CY_ISR(isr_1_Interrupt)
 {
@@ -151,11 +211,14 @@ CY_ISR(isr_1_Interrupt)
 
 void main()
 {
-  float bufferIn[3 * frame_size];
-  float bufferOut[3 * frame_size];
+
+  int frame_size = time2sample(fs,t);
+  int buffer_size = 3 * frame_size;
+  float bufferIn[buffer_size];
+  float bufferOut[buffer_size];
   unsigned char j = 50;        // milliseconds delay
   int start = 0;
-  int frame_size = time2sample(fs,t);
+
 
 
   ADC_DelSig_1_Start();        // start the ADC_DelSig_1
@@ -186,14 +249,14 @@ void main()
         data[dataCount] = adcResult;
 
         if (!start){
-                    int i;
+          int i;
           for(i = frame_size; i < 2*frame_size; i++){
             bufferIn[i + 2 * frame_size - 1] = data[i - frame_size];
           }
           start = 1;
         }
         else{
-                int i;
+          int i;
           // Finally, put in our new data.
           for (i = 0; i <frame_size; i = i+1) {
               bufferIn[i + 2 * frame_size - 1] = data[i];
@@ -201,12 +264,12 @@ void main()
         }
         if (dataCount == frame_size){
           dataCount = 0;
-                    int i;
+          int i;
           for (i = 0; i < 2 * frame_size; i=i+1) {
               bufferIn[i] = bufferIn[i + frame_size - 1];
           }
           td_psola(bufferIn, bufferOut, 3 * frame_size);
-                    int j;
+          int j;
           for ( j = 0; j < 2 * frame_size; j=j+1) {
                   bufferOut[j] = bufferOut[j + frame_size - 1];
               }
